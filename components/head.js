@@ -2,7 +2,8 @@ import Head from 'next/head'
 
 export default function HeadObject({children}) {
     const title = "Nonprofit Foundation";
-    const keywords = "Our transparency page for our bank account.";
+    const description = "Our transparency page for our bank account."
+    const keywords = "nonprofit, transparency, foundation, nonprofit foundation";
     const author = "Nonprofit Foundation";
     const twitter = "@nonprofitfdn";
     //const image = "/ogimage.png"; // This is your OpenGraph image
