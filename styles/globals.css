@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dark {
+    background: #000000;
+}
+
+.w-fitcontent {
+    width: fit-content;
+}

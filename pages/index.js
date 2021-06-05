@@ -1,19 +1,17 @@
-import { useEffect } from 'react'
 import HeadObject from '../components/head'
 import Nav from '../components/nav';
+import Stats from '../components/Stats';
+import Table from '../components/Table';
 
 export default function Home() {
-  useEffect(() => {
-    console.log('Made by Sarthak Mohanty. All Rights Reserved. Want to hire me? https://srtk.me')
-  });
-
   return (
     <div className="dark:text-white dark:bg-black">
-      <HeadObject>
-        {/* You can put extra tags in here, or leave it blank */}
-      </HeadObject>
+      <HeadObject />
       <Nav />
-      The perfect Next.js Theme. Contains everything. Check README for more information.
+      <main className="md:w-5/6 mx-auto">
+        <Stats />
+        <Table />
+      </main>
     </div>
   )
 }

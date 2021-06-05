@@ -1,5 +1,5 @@
 {
-  "name": "perfect-next-theme",
+  "name": "npf-transparency",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "airtable-plus": "^1.0.4",
     "next": "10.0.7",
     "next-themes": "^0.0.11",
     "react": "17.0.1",
