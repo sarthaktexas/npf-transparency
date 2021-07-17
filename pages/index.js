@@ -1,16 +1,16 @@
 import HeadObject from '../components/head'
+import Info from '../components/Info';
 import Nav from '../components/nav';
-import Stats from '../components/Stats';
-import Table from '../components/Table';
+import Txs from '../components/Txs'
 
 export default function Home() {
   return (
     <div className="dark:text-white dark:bg-black">
       <HeadObject />
-      <Nav />
-      <main className="md:w-5/6 mx-auto">
-        <Stats />
-        <Table />
+      {/* <Nav /> */}
+      <main className="mx-auto my-20 flex flex-col space-y-10 md:space-y-0 md:grid md:grid-cols-3 w-5/6">
+        <Info />
+        <Txs />
       </main>
     </div>
   )

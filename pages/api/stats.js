@@ -32,8 +32,8 @@ module.exports = async (_, res) => {
     let readTotal = await txsWithDate.read();
     readTotal = readTotal.filter(d => new Date(Date.parse(d.date)).getUTCMonth() === new Date().getUTCMonth()).filter(d => new Date(Date.parse(d.date)).getFullYear === new Date().getFullYear);
     res.json({
-        totalAmount: formatter.format(readTxsRes.reduce((a, b) => { return a + b })),
-        amountRaisedMonth: formatter.format(readTotal.filter(a => a.amount > 0).map(o => { return o.amount }).reduce((a, b) => { return a + b })),
-        amountSpentMonth: formatter.format(readTotal.filter(a => a.amount < 0).map(o => { return o.amount }).reduce((a, b) => { return a + b })).substring(1),
+        totalAmount: formatter.format(readTxsRes.reduce((a, b) => { return a + b }, 0)),
+        amountRaisedMonth: formatter.format(readTotal.filter(a => a.amount > 0).map(o => { return o.amount }).reduce((a, b) => { return a + b }, 0)),
+        amountSpentMonth: formatter.format(readTotal.filter(a => a.amount < 0).map(o => { return o.amount }).reduce((a, b) => { return a + b }, 0)),
     });
   }
